@@ -1,0 +1,60 @@
+{
+  "project_info":
+  {
+    "project_number": "979003796216",
+    "firebase_url": "https://repairme-17658.firebaseio.com",
+    "project_id": "repairme-17658",
+    "storage_bucket": "repairme-17658.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:979003796216:android:b044c47deb2f1d9f",
+        "android_client_info": {
+          "package_name": "repaireme.com.repairme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "979003796216-cgbh2344r96pnhdbsomcp1e4gnimjgeg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "repaireme.com.repairme",
+            "certificate_hash": "40f162fca4bd53ca37bf1055a34be01108931979"
+          }
+        },
+        {
+          "client_id": "979003796216-crve9160shk1g2gkjm3ehga16qgchu06.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "979003796216-crve9160shk1g2gkjm3ehga16qgchu06.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYDII64ZKQI7SAO3iANHcUNoRpuLIObxw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "979003796216-crve9160shk1g2gkjm3ehga16qgchu06.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
