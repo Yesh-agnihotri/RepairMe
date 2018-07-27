@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
             protected void populateView(View v, Message model, int position) {
 
                 //Get references to the views of list_item.xml
-                TextView messageProblem, messageUser, messageTime,messageName,messageAddress,messagePhone,messageDescription;
+                TextView messageProblem, messageUser, messageTime,messageName,messageAddress,messagePhone,messageDescription,company_name,model_no,serviceType,prod_id,coupon;
                 messageProblem = (TextView) v.findViewById(R.id.message_problem);
                 messageUser = (TextView) v.findViewById(R.id.message_user);
                 messageTime = (TextView) v.findViewById(R.id.message_time);
@@ -134,6 +134,12 @@ public class MainActivity extends AppCompatActivity {
                 messageAddress=(TextView)v.findViewById(R.id.message_address);
                 messagePhone=(TextView)v.findViewById(R.id.message_phone);
                 messageDescription=(TextView)v.findViewById(R.id.message_description);
+                company_name=(TextView)v.findViewById(R.id.company_name);
+                model_no=(TextView)v.findViewById(R.id.model_no);
+                prod_id=(TextView)v.findViewById(R.id.product_id);
+                serviceType=(TextView)v.findViewById(R.id.ServiceType);
+                coupon=(TextView)v.findViewById(R.id.coupon);
+
 
                 messageProblem.setText(model.getMessageProb());
                 messageUser.setText(model.getMessageUser());
@@ -142,6 +148,11 @@ public class MainActivity extends AppCompatActivity {
                 messageDescription.setText(model.getMessageProbDesc());
                 messageName.setText(model.getMessageName());
                 messagePhone.setText(model.getMessagePhone());
+                serviceType.setText(model.getServiceType());
+                coupon.setText(model.getCoupon());
+                prod_id.setText(model.getProd_id());
+                model_no.setText(model.getModel_no());
+                company_name.setText(model.getModel_no());
 
             }
         };
@@ -160,6 +171,11 @@ public class MainActivity extends AppCompatActivity {
               String userPhone=((TextView)relativeLayout.getChildAt(5)).getText().toString();
               String userProblem=((TextView)relativeLayout.getChildAt(2)).getText().toString();
               String userProblemDescription=((TextView)relativeLayout.getChildAt(6)).getText().toString();
+              String userServiceType=((TextView)relativeLayout.getChildAt(7)).getText().toString();
+              String userCompanyName=((TextView)relativeLayout.getChildAt(8)).getText().toString();
+              String userModelNo=((TextView)relativeLayout.getChildAt(9)).getText().toString();
+              String userProductId=((TextView)relativeLayout.getChildAt(10)).getText().toString();
+              String userCoupon=((TextView)relativeLayout.getChildAt(11)).getText().toString();
 
               Intent i = new Intent(getApplicationContext(), ShowDetails.class);
               i.putExtra("Name", userName);
@@ -168,6 +184,12 @@ public class MainActivity extends AppCompatActivity {
               i.putExtra("Phone", userPhone);
               i.putExtra("Problem", userProblem);
               i.putExtra("ProblemDescription", userProblemDescription);
+              i.putExtra("ServiceType", userServiceType);
+              i.putExtra("CompanyName", userCompanyName);
+              i.putExtra("ModelNo", userModelNo);
+              i.putExtra("ProdId", userProductId);
+              i.putExtra("Coupon", userCoupon);
+
               startActivity(i);
           }
       };

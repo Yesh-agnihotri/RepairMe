@@ -17,13 +17,15 @@ import android.widget.TextView;
 class CustomPagerAdapter extends PagerAdapter {
 
     int[] mResources = {
-            R.drawable.special_offers1,
-            R.drawable.special_offers2,
+            R.drawable.fast,
+            R.drawable.service,
+            R.drawable.disountcoupon,
 
     };
     String[] text={
-      "1",
-            "2"
+            "1",
+            "2",
+            "3"
     };
 
     Context mContext;
@@ -51,9 +53,9 @@ class CustomPagerAdapter extends PagerAdapter {
         View itemView = mLayoutInflater.inflate(R.layout.pager_item, container, false);
 
         ImageView imageView = (ImageView) itemView.findViewById(R.id.imageView);
-        TextView textView=(TextView)itemView.findViewById(R.id.myImageViewText);
+        //TextView textView=(TextView)itemView.findViewById(R.id.myImageViewText);
         imageView.setImageResource(mResources[position]);
-        textView.setText(text[position]);
+        //textView.setText(text[position]);
         container.addView(itemView);
 
         return itemView;
@@ -61,7 +63,7 @@ class CustomPagerAdapter extends PagerAdapter {
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-        container.removeView((LinearLayout) object);
+        container.removeView((RelativeLayout) object);
     }
 }
 

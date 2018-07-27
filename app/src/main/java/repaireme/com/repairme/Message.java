@@ -13,11 +13,16 @@ public class Message {
     private String messagePhone;
     private String messageProb;
     private String messageProbDesc;
-    private String messageText;
+    private String company_name;
+    private String model_no;
+    private String prod_id;
+    private String coupon;
+    private String serviceType;
     private String messageUser;
     private long messageTime;
 
-    public Message(String messageName, String messageUser,String messageAddr,String messagePhone,String messageProb,String messageProbDesc) {
+    public Message(String messageName, String messageUser,String messageAddr,String messagePhone,String messageProb,String messageProbDesc,String company_name,String model_no,String prod_id,String coupon,String serviceType) {
+
         this.messageName = messageName;
         this.messageUser = messageUser;
         this.messageAddr=messageAddr;
@@ -25,6 +30,11 @@ public class Message {
         this.messageProb=messageProb;
         this.messageProbDesc=messageProbDesc;
         messageTime = new Date().getTime();
+        this.company_name=company_name;
+        this.model_no=model_no;
+        this.prod_id=prod_id;
+        this.coupon=coupon;
+        this.serviceType=serviceType;
     }
 
     public Message() {
@@ -87,4 +97,44 @@ public class Message {
     public void setMessageProbDesc(String messageProbDesc) {
         this.messageProbDesc = messageProbDesc;
     }
+    public String getCompany_name() {
+        return company_name;
+    }
+
+    public void setCompany_name(String company_name) {
+        this.company_name = company_name;
+    }
+
+    public String getModel_no() {
+        return model_no;
+    }
+
+    public void setModel_no(String model_no) {
+        this.model_no = model_no;
+    }
+
+    public String getProd_id() {
+        return prod_id;
+    }
+
+    public void setProd_id(String prod_id) {
+        this.prod_id = prod_id;
+    }
+
+    public String getCoupon() {
+        return coupon;
+    }
+
+    public void setCoupon(String coupon) {
+        this.coupon = coupon;
+    }
+
+    public String getServiceType() {
+        return serviceType;
+    }
+
+    public void setServiceType(String serviceType) {
+        this.serviceType = serviceType;
+    }
+
 }

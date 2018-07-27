@@ -65,10 +65,10 @@ public class HomeActivity extends AppCompatActivity {
 
     private static int SIGN_IN_REQUEST_CODE = 1;
     private FirebaseListAdapter<Message> adapter;
-    RelativeLayout activity_main;
+
 
     EditText emojiconEditText;
-    ImageView RepairButton;
+    ConstraintLayout CompRepairButton,MobileRepairButton;
     ConstraintLayout activity_home;
 
     @Override
@@ -147,16 +147,30 @@ public class HomeActivity extends AppCompatActivity {
         activity_home = (ConstraintLayout)findViewById(R.id.home_activity);
 
 
-        RepairButton = (ImageView)findViewById(R.id.SelectComputer);
+        CompRepairButton = (ConstraintLayout) findViewById(R.id.SelectComputer);
 
 
-        RepairButton.setOnClickListener(new View.OnClickListener() {
+        CompRepairButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 //Start a fragment
 
-                Intent i = new Intent(getApplicationContext(), RepairForm.class);
+                Intent i = new Intent(getApplicationContext(), RepairForm.class).putExtra("ServiceType", "Computer");;
+                startActivity(i);
+
+            }
+        });
+        MobileRepairButton = (ConstraintLayout) findViewById(R.id.SelectMobile);
+
+
+        MobileRepairButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                //Start a fragment
+
+                Intent i = new Intent(getApplicationContext(), RepairForm.class).putExtra("ServiceType", "Mobile");;
                 startActivity(i);
 
             }
@@ -175,13 +189,24 @@ public class HomeActivity extends AppCompatActivity {
         }
 
 
-        Button mDialButton = (Button) findViewById(R.id.btn_dial);
+        ConstraintLayout mDialButton = (ConstraintLayout) findViewById(R.id.btn_dial);
 
         mDialButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    String dial = "tel:" + "7836083959";
+                    String dial = "tel:" + "9838179392";
                     startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse(dial)));
+            }
+        });
+
+        ConstraintLayout mLocateButton=(ConstraintLayout)findViewById(R.id.bttn_map);
+        mLocateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri mapUri = Uri.parse("geo:0,0?q=25.4367340,82.8535220(RepairMe WorkShop)");
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, mapUri);
+                mapIntent.setPackage("com.google.android.apps.maps");
+                startActivity(mapIntent);
             }
         });
 
@@ -191,13 +216,15 @@ public class HomeActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onResume() {
+    protected void onResume()
+    {
         super.onResume();
         handler.postDelayed(runnable, delay);
     }
 
     @Override
-    protected void onPause() {
+    protected void onPause()
+    {
         super.onPause();
         handler.removeCallbacks(runnable);
     }

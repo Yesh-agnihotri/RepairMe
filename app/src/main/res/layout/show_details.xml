@@ -6,60 +6,52 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/tusername"
-        android:layout_width="0dp"
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:ems="10"
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
 
     <TextView
-        android:id="@+id/tuser_address"
-        android:layout_width="0dp"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:id="@+id/user_address"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:ems="10"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <TextView
-        android:id="@+id/tuser_phone"
-        android:layout_width="0dp"
+        android:id="@+id/user_phone"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:layout_marginTop="8dp"
-        android:ems="10"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
     <TextView
-        android:id="@+id/tprob"
-        android:layout_width="0dp"
+        android:id="@+id/prob"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:ems="10"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
@@ -67,15 +59,13 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/tprob_desc"
-        android:layout_width="0dp"
+        android:id="@+id/prob_desc"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:layout_marginTop="8dp"
-        android:ems="10"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
@@ -85,57 +75,66 @@
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="Name"
-        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/username"
+        app:layout_constraintEnd_toStartOf="@+id/username"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tusername" />
+        app:layout_constraintTop_toTopOf="@+id/username" />
 
     <TextView
         android:id="@+id/Address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="Address"
-        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/user_address"
+        app:layout_constraintEnd_toStartOf="@+id/user_address"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tuser_address" />
+        app:layout_constraintTop_toTopOf="@+id/user_address" />
 
     <TextView
         android:id="@+id/PhoneNo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="PhoneNo"
-        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/user_phone"
+        app:layout_constraintEnd_toStartOf="@+id/user_phone"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+        app:layout_constraintTop_toTopOf="@+id/user_phone" />
 
     <TextView
         android:id="@+id/Problem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="Problem"
-        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/prob"
+        app:layout_constraintEnd_toStartOf="@+id/prob"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tprob" />
+        app:layout_constraintTop_toTopOf="@+id/prob" />
 
     <TextView
         android:id="@+id/Description"
         android:layout_width="wrap_content"
-        android:layout_height="15dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Description"
-        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintBottom_toBottomOf="@+id/prob_desc"
+        app:layout_constraintEnd_toStartOf="@+id/prob_desc"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tprob_desc" />
+        app:layout_constraintTop_toTopOf="@+id/prob_desc" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
@@ -149,42 +148,88 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.14" />
+        app:layout_constraintGuide_percent="0.13" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
+        app:layout_constraintGuide_percent="0.23" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.36" />
+        app:layout_constraintGuide_percent="0.33" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.47" />
+        app:layout_constraintGuide_percent="0.43" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.8" />
+        app:layout_constraintGuide_percent="0.55" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.3" />
+        app:layout_constraintGuide_percent="0.0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ProductDetails"
+        android:text="Computer Details"
+        app:layout_constraintBottom_toBottomOf="@id/product_id"
+        app:layout_constraintEnd_toStartOf="@id/company_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/company_name" />
+
+    <TextView
+        android:id="@+id/company_name"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toTopOf="@+id/guideline6" />
+
+    <TextView
+        android:id="@+id/model_no"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@id/company_name" />
+
+    <TextView
+        android:id="@+id/product_id"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@id/model_no" />
 
     <Button
         android:id="@+id/back_button"
@@ -195,10 +240,26 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@color/colorAccent"
-        android:text="Back"
+        android:text="Submit"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline6" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_margin="8dp"
+        app:layout_constraintBottom_toTopOf="@id/submit_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/product_id"
+        app:layout_constraintStart_toStartOf="parent">
+        <TextView
+            android:id="@+id/coupon"
+            android:background="#FFE4B5"
+            android:text="coupon status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
